@@ -1,0 +1,41 @@
+body{
+/* background-color: rgb(0, 255, 255); */
+}
+
+.loader-figure{
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;;
+}
+
+.loader-figure > div{
+    width: 1rem;
+    height: 1rem;
+    background-color: rgb(255, 8, 8);
+    margin-right: .5rem;
+    border-radius: 50%;
+    box-shadow: 0px 0px .25rem rgb(255, 8, 8);
+    animation: transformar-figura .8s ease  infinite alternate ;
+    transform: scale(1);
+}
+
+.loader-figure > div:nth-child(2){
+    background-color: rgb(0, 255, 76);
+    box-shadow: 0px 0px .25rem rgb(0, 255, 76);
+    animation-delay: 0.2s;
+}
+
+.loader-figure > div:nth-child(3){
+    background-color: rgb(17, 0, 255);
+    box-shadow: 0px 0px .25rem rgb(17, 0, 255);
+    animation-delay: 0.4s;
+}
+
+@keyframes transformar-figura{
+    to{
+        opacity: 0.9;
+        border-radius: 0%;
+        box-shadow: none;
+        transform: scale(.6);
+    }
+}
